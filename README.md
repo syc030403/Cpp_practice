@@ -55,7 +55,7 @@ int main() {
 	cout << "pizza 면적은" << area << endl;
 }
 ```
-예제: main함수가 작동하도록 width와 height를 가지고 면적 계산을 할 수 있는 Rectangle 클래스를 구현해라
+제문제: main함수가 작동하도록 width와 height를 가지고 면적 계산을 할 수 있는 Rectangle 클래스를 구현해라
 ```
 #include <iostream>
 #include <string>
