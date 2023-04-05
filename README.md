@@ -24,3 +24,31 @@ int main() {
 	}
 }
 ```
+2023/04/03
+클래스를 활용하여 도넛과 피자의 면적구하기
+```
+#include <iostream>
+using namespace std;
+
+class Circle {         //클래스 선언
+public:
+	int radius;
+	double getArea();
+};
+
+double Circle::getArea() {     //클래스 구현
+	return 3.14 * radius * radius;
+}
+
+int main() {
+	Circle donut;   //객체 생성
+	donut.radius = 1; // 객체에 멤버함수 접근
+	double area = donut.getArea();  //객체의 멤버함수 호출
+	cout << "donut 면적은" << area << endl;
+
+	Circle pizza;
+	pizza.radius = 30;
+	area = pizza.getArea();
+	cout << "pizza 면적은" << area << endl;
+}
+```
