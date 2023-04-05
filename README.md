@@ -76,3 +76,41 @@ int main() {
 	cout << "사각형의 면적은 " << rect.getArea() << endl;
 }
 ```
+2개의 생성자를 가진 Circle 클래스
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Circle {
+public:
+	int radius;
+	Circle();
+	Circle(int r);
+	double getArea();
+};
+
+Circle::Circle() { //Circle() 자동호출
+	radius = 1;
+	cout << "반지름 " << radius << "인 원 생성" << endl;
+}
+
+Circle::Circle(int r) { //Circle(int r) 자동호출 (r = 30)
+	radius = r;
+	cout << "반지름 " << radius << "인 원 생성" << endl;
+}
+
+double Circle::getArea() {
+	return 3.14 * radius * radius;
+}
+
+int main() {
+	Circle donut;
+	double area = donut.getArea();
+	cout << "donut 면적은" << area << endl;
+
+	Circle pizza(30);
+	area = pizza.getArea();
+	cout << "pizza 면적은" << area << endl;
+}
+```
