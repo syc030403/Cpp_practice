@@ -79,7 +79,7 @@ int main() {
 	cout << "사각형의 면적은 " << rect.getArea() << endl;
 }
 ```
-2개의 생성자를 가진 Circle 클래스
+2개의 생성자를 가진 Circle 클래스 를 활용하여 도넛과 피자의 면적 구하기
 ```
 #include <iostream>
 #include <string>
@@ -115,5 +115,40 @@ int main() {
 	Circle pizza(30);
 	area = pizza.getArea();
 	cout << "pizza 면적은" << area << endl;
+}
+```
+위임 생성자를 활용한 도넛과 피자의 면적 구하기
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Circle {
+public:
+	int radius;
+	Circle();
+	Circle(int r);
+	double getArea();
+};
+
+Circle::Circle() : Circle(1){}
+
+Circle::Circle(int r) {
+	radius = r;
+	cout << "반지름 " << radius << "의 원 생성" << endl;
+}
+
+double Circle::getArea() {
+	return 3.14 * radius * radius;
+}
+
+int main() {
+	Circle donut;
+	double area = donut.getArea();
+	cout << "donut 면적은" << area << endl;
+
+	Circle pizza(30);
+	area = pizza.getArea();
+	cout << "pizza 면적은 " << area << endl;
 }
 ```
