@@ -230,7 +230,7 @@ int main() {
 }
 ```
 ---
-Circle 클래스에 소멸자 작성 및 
+Circle 클래스에 소멸자 작성 및 실행
 ```
 #include <iostream>
 using namespace std;
