@@ -192,13 +192,13 @@ class Rectangle {
 public:
 	int width;
 	int height;
-	Rectangle();								// 생성자 1
-	Rectangle(int w, int h);					// 생성자 2
-	Rectangle(int len);							// 생성자 3
-	bool isSquare();							// 멤버함수
+	Rectangle();					// 생성자 1
+	Rectangle(int w, int h);			// 생성자 2
+	Rectangle(int len);				// 생성자 3
+	bool isSquare();				// 멤버함수
 };
 
-Rectangle::Rectangle() {						// 생성자 1 호출
+Rectangle::Rectangle() {				// 생성자 1 호출
 	width = height = 1;
 }
 
@@ -207,11 +207,11 @@ Rectangle::Rectangle(int w, int h) {			// 생성자 2 호출
 	height = h;
 }
 
-Rectangle::Rectangle(int len) {					// 생성자 3 호출
+Rectangle::Rectangle(int len) {				// 생성자 3 호출
 	width = height = len;
 }
 
-bool Rectangle::isSquare() {					// 정사각형이면 true를 아니면 false를 반환하는 함수
+bool Rectangle::isSquare() {				// 정사각형이면 true를 아니면 false를 반환하는 함수
 	if (width == height) {
 		return true;
 	}
