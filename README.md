@@ -314,4 +314,24 @@ int main() {
 	Circle mainPizza(30);
 	f();
 }
+/*
+프로그램 로딩
+1. globalDonut 객체 생성
+2. globalPizza 객체 생성
+main() 함수 시작 
+3. mainDonut 객체 생성
+4. mainPizza 객체 생성
+f() 함수 실행
+5. fDonut 객체 생성
+6. fPizza 객체 생성
+f() 함수 종료
+-6. fPizza 객체 소멸
+-5. fDonut 객체 소멸
+main() 함수 종료
+-4. mainPizza 객체 생성
+-3. mainDonut 객체 생성
+프로그램 종료
+-2. globalPizza 객체 종료
+-1. globalDonut 객체 종료
+*/
 ```
