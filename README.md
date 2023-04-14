@@ -590,36 +590,47 @@ int main() {
 }
 ```
 ---
-정수형 배열의 동적 할당 및 변환
+4 - 8 Circle 객체의 동적 생성 및 반환
 ```
-#include <iostream>
+#include<iostream>
 using namespace std;
 
+class Circle {
+	int radius;
+public:
+	Circle();
+	Circle(int r);
+	~Circle();
+	void setRadius(int r) {
+		radius = r;
+	}
+	double getArea() {
+		return 3.14 * radius * radius;
+	}
+};
+
+Circle::Circle() {
+	radius = 1;
+	cout << "생성자 실행 radius = " << radius << endl;
+}
+
+Circle::Circle(int r) {
+	radius = r;
+	cout << "생성자 실행 radius = " << radius << endl;
+}
+
+Circle::~Circle() {
+	cout << "소멸자 실행 radius = " << radius << endl;
+}
+
 int main() {
-	cout << "입력할 정수의 개수는?";
-	int n;
-	cin >> n;
-	if (n <= 0) {
-		return 0;
-	}
-	int* p = new int[n];
-	if (!p) {
-		cout << "메모리를 할당할 수 없습니다.";
-		return 0;
-	}
-
-	for (int i = 0; i < n; i++) {
-		cout << i + 1 << "번째 정수: ";
-		cin >> p[i];
-	}
-
-	int sum = 0;
-	for (int i = 0; i < n; i++) {
-		sum += p[i];
-	}
-	cout << "평균 = " << sum / n << endl;
-
-	delete[] p;
+	Circle* p, * q;
+	p = new Circle;
+	q = new Circle(30);
+	cout << p->getArea() << endl << q->getArea() << endl;
+	delete p;
+	delete q;
 }
 ```
+
 
