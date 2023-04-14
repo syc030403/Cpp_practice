@@ -405,7 +405,7 @@ int main() {
 }
 ```
 ---
-4 - 2 Circle 클래스의 배열 선언 및 
+4 - 2 Circle 클래스의 배열 선언 및 활용   
 ```
 #include <iostream>
 using namespace std;
